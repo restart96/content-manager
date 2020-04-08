@@ -1,0 +1,36 @@
+{
+    "name": "restart/content-manager",
+    "description": "Content Manager Package for Laravel Framework",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "SJ",
+            "email": "restart96@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Restart\\ContentManager\\App\\Providers\\ContentManagerServiceProvider"
+            ],
+            "aliases": {
+                "ContentManager": "Restart\\ContentManager\\App\\Facades\\ContentManager"
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Restart\\ContentManager\\": "src"
+        },
+        "files":[
+            "src/app/Helpers/content.php"
+        ]
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.0",
+        "illuminate/support": "^5.8 || ^6.0 || ^7.0",
+        "jenssegers/agent": "^2.6.3",
+        "kalnoy/nestedset": "^5.0"
+    }
+}
